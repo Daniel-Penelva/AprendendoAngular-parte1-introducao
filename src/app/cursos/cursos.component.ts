@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursosService } from './cursos.service';
 
 @Component({
   selector: 'app-cursos',
@@ -6,17 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos.component.scss']
 })
 export class CursosComponent implements OnInit {
-
  nome: string;
- listaLinguagemProgramacao:string[] = ["Java", "Angular"];;
+ cursos: string[];
 
-  constructor() {
-
-    this.nome = 'Daniel';
-
-    for(let i=0; i<this.listaLinguagemProgramacao.length; i++){
-      let linguagensProgramacao = this.listaLinguagemProgramacao[i];
-    }
+  constructor(public cursosServices: CursosService) {
+     this.nome = 'Daniel';
+     this.cursos = this.cursosServices.getcursos();
    }
 
   ngOnInit(): void {

@@ -60,5 +60,10 @@ Para parar o ng serve utiliza o atalho: CTRL + C
    OBS 2. Se fizer o comando para criar um componente chamado curso, ele irá criar esse componente dentro da pasta curso.
           Comando: ng g c curso
 
+--> Para criar serviço
+    ng g s <nome_do_service>
+    Ou
+    ng g service <nome_do_service>
+
 -------------------------------------------------------------------------------------------
 
